@@ -10,9 +10,6 @@ from werkzeug.security import check_password_hash, generate_password_hash
 #Configure blueprint
 views = Blueprint("views", __name__)
 
-#Configure SQL table
-#TODO
-
 #Login_required decorator
 def login_required(f):
     @wraps(f)
