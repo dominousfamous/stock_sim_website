@@ -43,7 +43,7 @@ At first I tried to make calls to the IEX API for every stock that existed, but 
 free IEX account. I resorted to storing all the stocks' symbol,name and category into a SQL table, once and for all, so that whenever I would need to filter through
 all the stocks depending on what category the user chose, all I needed to do was execute one or more fairly simple SQL queries. 
 
-####Conclusion
+**Conclusion
 This was truly one of the most entertaining projects I have ever done throughout all of the projects I did in different subjects. Unfortunately, this website isn't available 
 to the whole world. It is only available to me, specifically the desktop these files are located on. To make it accessible to the whole world, I would need to deploy my web
 application through Heroku or purchasing a domain name, but the purpose of this project wasn't mainly to make it available to everyone - rather it was for me to merely code a 
