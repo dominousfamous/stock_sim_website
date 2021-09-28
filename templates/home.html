@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    HomePage
+{% endblock %}
+
+{% block user %}
+{{session.user}}
+{% endblock %}
+
+{% block main %}
+
+<div class="section">
+    <h1><center><b><i>HOME</i></b></center></h1>
+
+    <div class = "form-group">
+        <h3>STOCK CATEGORIES</h3>
+        <form action="#" method = "post">
+            <select name = "category">
+                {% for i in range(length) %}
+                <option>
+                    {{tags[i][0]}}
+                </option>
+                {% endfor %}
+            </select>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class = "form-group">
+        <P><h4><b>Get Stock Price</b></h4></P>
+
+        <form action = "#" method = "post">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Type in stock symbol" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Get Price</button>
+        </form>
+
+        {% if quoted %}
+        <div>
+            <b><i>A share of {{symbol}} ({{company}}) currently costs {{price}}</b></i> 
+        </div>
+        {% endif %}
+    </div>
+
+    {% if selection %}
+    <div><h5>CATEGORY: {{category}}</h5></div>
+    <table class = "table table-bordered">
+        <thead class = "thead-dark">
+            <tr>
+                <th>Company</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if results_length == 0 %}
+            <h6><u>There are no companies currently available within this category</u></h6>
+            {% endif %}
+
+            {% for i in range(results_length) %}
+            {% set symbol = results[i][2] %}
+            {% set name = results[i][1] %}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{symbol}}</td>
+            </tr>
+             {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Add/Remove $
+{% endblock %}
+
+{% block user %}
+{{session.user}}
+{% endblock %}
+
+{% block main %}
+<h1><center><b><i>DEPOSIT/WITHDRAW</i></b></center></h1>
+<br />
+    <!--Form for depositing money-->
+    <form action = "/changeMoney" method = 'post'>
+
+        <label for "deposit"><b>DEPOSIT MONEY(only decimals/whole-numbers no $ etc)</b></label>
+
+        <div class = 'form-group'>
+            <input class = "form-control" autofocus autocomplete = "off" name = 'deposit' placeholder = 'Only decimals/whole-numbers' type = "text">
+        </div>
+        <button class="btn btn-primary" type="submit">Deposit</button>
+    </form>
+
+    <br />
+    <br />
+
+    <!--Form for withdrawing money-->
+    <form action = "/changeMoney" method = 'post'>
+        <label for "withdraw"><b>WITHDRAW MONEY(only decimals/whole-numbers no $ etc)</b></label>
+
+        <div class = 'form-group'>
+            <input class = "form-control" autofocus autocomplete = "off" name = 'withdraw' placeholder = 'Only decimals/whole-numbers' type = "text">
+        </div>
+        <button class="btn btn-primary" type="submit">Withdraw</button>
+    </form>
+{% endblock %}
