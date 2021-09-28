@@ -19,14 +19,23 @@ The frontend aspect of this project, on the other hand, was split up into two ma
 templates-which contains all the html files.
 
 **layout.html** : base html page that every other html page extends; contains all the links at the navbar, IEX attribution link, and the important note at the top of the page
+
 **register.html** : html page that allows users to register
+
 **login.html** : html page that lets users login
+
 **home.html** : html page that lets users view stocks of a variety of categories, as well as finding out the current price of stocks
+
 **account.html** : html page for the page that shows the user's stocks, their values, and how much cash they have
+
 **history.html** : html page that shows all of the user's transactions(buy,sell)
+
 **buy.html** : html page that lets users buy stocks of their choice
+
 **sell.html** : html page that lets users sell stocks that they own
+
 **changeMoney.html** : allows users to deposit and withdraw money
+
 **changePassword.html** : allows users to change their password
 
 The main difficulty I had with this project is the homepage. I wanted users to be able to view all the stocks that belong to a particular category(for instance:airlines).
