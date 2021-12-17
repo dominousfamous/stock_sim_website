@@ -45,7 +45,4 @@ all the stocks depending on what category the user chose, all I needed to do was
 
 ## Conclusion
 
-This was truly one of the most entertaining projects I have ever done throughout all of the projects I did in different subjects. Unfortunately, this website isn't available 
-to the whole world. It is only available to me, specifically the desktop these files are located on. To make it accessible to the whole world, I would need to deploy my web
-application through Heroku or purchasing a domain name, but the purpose of this project wasn't mainly to make it available to everyone - rather it was for me to merely code a 
-website, which I always wanted to do.
+This was truly one of the most entertaining projects I have ever done throughout all of the projects I did in different subjects. Through the creation of a project of my interest, I solved an issue of mine - something I always wanted to do.
